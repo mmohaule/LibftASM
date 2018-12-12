@@ -22,10 +22,10 @@ read:
     je exit
 
 print:
+    mov rdx, rax
     mov rax, 0x2000004
     mov rdi, 1
     mov rsi, buff
-    mov rdx, 10
     syscall
     
     jmp read
