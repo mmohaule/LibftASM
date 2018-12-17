@@ -7,13 +7,13 @@ _ft_isdigit:
 	push	rbp
 	mov		rbp, rsp
 	cmp		rdi, '0'
-	jl		false
+	jl		notdigit
 	cmp		rdi, '9'
-	jg		false
+	jg		notdigit
 	mov		rax, 1
 	leave
 	ret
-false:
+notdigit:
 	mov		rax, 0
 	leave
 	ret
