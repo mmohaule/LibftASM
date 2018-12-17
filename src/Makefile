@@ -1,5 +1,3 @@
-
-
 NAME = libfts.a
 
 EXEC = test
