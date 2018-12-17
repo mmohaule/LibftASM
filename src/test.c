@@ -36,6 +36,15 @@ void isalnum_test(int c)
     printf("%i\n", ft_isalnum(c));
 }
 
+void	isascii_test(char c)
+{
+	printf("isalpha >> %c\n", c);
+    printf("%i\n", isascii(c));
+
+    printf("ft_isalpha >> %c\n", c);
+    printf("%i\n", ft_isascii(c));
+}
+
 int main()
 {
     printf("\n");
@@ -135,6 +144,22 @@ int main()
     isalnum_test('a');
     isalnum_test('z');
     isalnum_test('}');
+
+    /*
+     * ft_isalnum
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_ISASCII\n");
+    printf("------------------------------------------\n");
+    
+    isascii_test('9');
+    isascii_test('A');
+    isascii_test('Z');
+    isascii_test('[');
+    isascii_test('a');
+    isascii_test('z');
+    isascii_test('}');
 
     //int fd;
 
