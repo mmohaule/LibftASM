@@ -94,6 +94,23 @@ int main()
     isalpha_test('a');
     isalpha_test('z');
     isalpha_test('}');
+    
+    /*
+     * ft_digit
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_ISDIGIT\n");
+    printf("------------------------------------------\n");
+    
+    isdigit_test('9');
+    isdigit_test('A');
+    isdigit_test('0');
+    isdigit_test('[');
+    isdigit_test('6');
+    isdigit_test('z');
+    isdigit_test('}');
+
 
     //int fd;
 
