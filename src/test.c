@@ -9,6 +9,24 @@ void	print_bytes(char *str, int num_bytes) {
 	}
 }
 
+void	isalpha_test(char c)
+{
+	printf("isalpha >> %c\n", c);
+    printf("%i\n", isalpha(c));
+
+    printf("ft_isalpha >> %c\n", c);
+    printf("%i\n", ft_isalpha(c));
+}
+
+void	isdigit_test(char c)
+{
+	printf("isdigit >> %c\n", c);
+    printf("%i\n", isdigit(c));
+
+    printf("ft_isdigit >> %c\n", c);
+    printf("%i\n", ft_isdigit(c));
+}
+
 int main()
 {
     printf("\n");
@@ -61,15 +79,23 @@ int main()
     print_bytes(str, 11);
     printf("\n\n");
     
+    /*
+     * ft_isalpha
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_ISALPHA\n");
+    printf("------------------------------------------\n");
     
-    
-    
-    
-    
-    
-    
-    
-    int fd;
+    isalpha_test('9');
+    isalpha_test('A');
+    isalpha_test('Z');
+    isalpha_test('[');
+    isalpha_test('a');
+    isalpha_test('z');
+    isalpha_test('}');
+
+    //int fd;
 
     //fd = open("sample.txt", O_RDONLY);
     //printf("File Descriptor: %i\n", fd);
