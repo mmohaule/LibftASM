@@ -6,13 +6,13 @@ _ft_isascii:
 	push	rbp
 	mov		rbp, rsp
 	cmp		rdi, 0
-	jl		false
+	jl		notascii
 	cmp		rdi, 127
-	jg		false
+	jg		notascii
 	mov		rax, 1
 	leave
 	ret
-false:
+notascii:
 	mov		rax, 0
 	leave
 	ret
