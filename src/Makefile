@@ -10,7 +10,7 @@ MAIN = test.c
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC =	ft_memset.s ft_bzero.s ft_isalpha.s ft_isdigit.s
+SRC =	ft_memset.s ft_bzero.s ft_isalpha.s ft_isdigit.s ft_isalnum.s
 
 OBJ = $(SRC:.s=.o)
 

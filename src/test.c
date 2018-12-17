@@ -27,6 +27,15 @@ void	isdigit_test(char c)
     printf("%i\n", ft_isdigit(c));
 }
 
+void isalnum_test(int c)
+{
+    printf("isalnum >> %c\n", c);
+    printf("%i\n", isalnum(c));
+
+    printf("ft_isalnum >> %c\n", c);
+    printf("%i\n", ft_isalnum(c));
+}
+
 int main()
 {
     printf("\n");
@@ -111,6 +120,21 @@ int main()
     isdigit_test('z');
     isdigit_test('}');
 
+    /*
+     * ft_isalnum
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_ISALNUM\n");
+    printf("------------------------------------------\n");
+    
+    isalnum_test('9');
+    isalnum_test('A');
+    isalnum_test('Z');
+    isalnum_test('[');
+    isalnum_test('a');
+    isalnum_test('z');
+    isalnum_test('}');
 
     //int fd;
 
