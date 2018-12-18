@@ -74,7 +74,9 @@ void	tolower_test(char c)
 
 void	puts_test(char *str)
 {
+    printf("puts >> %s\n", str);
     puts(str);
+    printf("ft_puts >> %s\n", str);
 	ft_puts(str);
 }
 
