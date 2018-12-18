@@ -8,7 +8,6 @@ _ft_toupper:
 	jl		return
 	cmp		rdi, 'z'
 	jg		return
-	mov		rdx, rdi
 	sub		rdi, 32
 	mov		rax, rdi
 return:
