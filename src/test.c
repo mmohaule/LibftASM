@@ -54,6 +54,15 @@ void	isprint_test(char c)
     printf("%i\n", ft_isprint(c));
 }
 
+void	toupper_test(char c)
+{
+	printf("toupper >> %c\n", c);
+    printf("%c\n", toupper(c));
+
+    printf("ft_toupper >> %c\n", c);
+    printf("%c\n", ft_toupper(c));
+}
+
 int main()
 {
     printf("\n");
@@ -186,6 +195,22 @@ int main()
     isprint_test('\n');
     isprint_test(' ');
     isprint_test('}');
+
+    /*
+     * ft_toupper
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_TOUPPER\n");
+    printf("------------------------------------------\n");
+    
+    toupper_test('9');
+    toupper_test('Z');
+    toupper_test('a');
+    toupper_test('h');
+    toupper_test('j');
+    toupper_test('m');
+    toupper_test(']');
 
     //int fd;
 
