@@ -63,6 +63,15 @@ void	toupper_test(char c)
     printf("%c\n", ft_toupper(c));
 }
 
+void	tolower_test(char c)
+{
+	printf("tolower >> %c\n", c);
+    printf("%c\n", tolower(c));
+
+    printf("ft_tolower >> %c\n", c);
+    printf("%c\n", ft_tolower(c));
+}
+
 int main()
 {
     printf("\n");
@@ -211,6 +220,23 @@ int main()
     toupper_test('j');
     toupper_test('m');
     toupper_test(']');
+
+    /*
+     * ft_toupper
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_TOLOWER\n");
+    printf("------------------------------------------\n");
+    
+    tolower_test('4');
+    tolower_test('Z');
+    tolower_test('a');
+    tolower_test('L');
+    tolower_test('E');
+    tolower_test('F');
+    tolower_test('I');
+
 
     //int fd;
 
