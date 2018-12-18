@@ -80,6 +80,14 @@ void	puts_test(char *str)
 	ft_puts(str);
 }
 
+void	strlen_test(char *str)
+{
+    printf("strlen >> %s\n", str);
+    printf("%lu\n", strlen(str));
+    printf("ft_strlen >> %s\n", str);
+	printf("%lu\n", ft_strlen(str));
+}
+
 int main()
 {
     printf("\n");
@@ -246,7 +254,7 @@ int main()
     tolower_test('I');
 
     /*
-     * ft_toupper
+     * ft_puts
      * 
      */
     printf("------------------------------------------\n");
@@ -257,6 +265,19 @@ int main()
     puts_test("Sring with\t\t\t tabs");
     puts_test("String with newline\n");
     puts_test("something random");
+
+    /*
+     * ft_strlen
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_STRLEN\n");
+    printf("------------------------------------------\n");
+    
+    strlen_test("String");
+    strlen_test("ABCDE");
+    strlen_test("Another one");
+    strlen_test("something random");
 
     //int fd;
 
