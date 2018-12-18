@@ -72,6 +72,12 @@ void	tolower_test(char c)
     printf("%c\n", ft_tolower(c));
 }
 
+void	puts_test(char *str)
+{
+    puts(str);
+	ft_puts(str);
+}
+
 int main()
 {
     printf("\n");
@@ -237,6 +243,18 @@ int main()
     tolower_test('F');
     tolower_test('I');
 
+    /*
+     * ft_toupper
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_PUTS\n");
+    printf("------------------------------------------\n");
+    
+    puts_test("String");
+    puts_test("Sring with\t\t\t tabs");
+    puts_test("String with newline\n");
+    puts_test("something random");
 
     //int fd;
 
