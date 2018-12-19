@@ -114,6 +114,18 @@ void	strdup_test(char *s1)
     printf("%s\n", ft_strdup(s1));
 }
 
+void	strcat_test(char *s1, char *s2)
+{
+    printf("strcat >> %s + %s\n", s1, s2);
+    printf("%s\n", strcat(s1, s2));
+}
+
+void	ft_strcat_test(char *s1, char *s2)
+{
+    printf("ft_strcat >> %s + %s\n", s1, s2);
+    printf("%s\n", ft_strcat(s1, s2));
+}
+
 int main()
 {
     printf("\n");
@@ -166,6 +178,24 @@ int main()
     print_bytes(str, 11);
     printf("\n\n");
     
+    /*
+     * ft_strcat
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_STRCAT\n");
+    printf("------------------------------------------\n");
+    
+    char s1[10] = "Two";
+    char *s2 = "Words";
+
+    strcat_test(s1, s2);
+
+    char s3[10] = "Two";
+    char *s4 = "Words";
+
+    ft_strcat_test(s3, s4);
+
     /*
      * ft_isalpha
      * 
@@ -328,11 +358,11 @@ int main()
     printf("FT_STRDUP\n");
     printf("------------------------------------------\n");
     
-    char *s1 = "String of bytes";
+    char *s = "String of bytes";
 
-    strdup_test(s1);
-    s1 = "See No Evil";
-    strdup_test(s1);
+    strdup_test(s);
+    s = "See No Evil";
+    strdup_test(s);
 
 
     /*
@@ -343,14 +373,13 @@ int main()
     printf("FT_CAT\n");
     printf("------------------------------------------\n");
     
-    //int fd;
+    int fd;
 
-    //fd = open("sample.txt", O_RDONLY);
-    //printf("File Descriptor: %i\n", fd);
+    fd = open("sample.txt", O_RDONLY);
+    printf("File Descriptor: %i\n", fd);
 
     //ft_cat(fd);
 
-    //printf("Done..!\n");
     
     return (0);
 }

@@ -4,7 +4,7 @@
 # include <stdio.h>
 # include <string.h>
 #include <ctype.h>
-//# include <fcntl.h>
+# include <fcntl.h>
 
 void			*ft_memset(void *s, int c, size_t n);
 void            ft_bzero(void *s, size_t n);
@@ -20,8 +20,11 @@ int             ft_tolower(int c);
 
 int             ft_puts(const char *s);
 size_t          ft_strlen(const char *s);
+char            *ft_strcat(char *restrict s1, const char *restrict s2);
 
 void            *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 char            *ft_strdup(const char *s1);
+
+void            ft_cat(int fd);
 
 #endif
