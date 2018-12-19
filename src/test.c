@@ -375,10 +375,10 @@ int main()
     
     int fd;
 
-    fd = open("sample.txt", O_RDONLY);
+    fd = open("../sample.txt", O_RDONLY);
     printf("File Descriptor: %i\n", fd);
 
-    //ft_cat(fd);
+    ft_cat(fd);
 
     
     return (0);
