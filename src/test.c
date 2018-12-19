@@ -1,7 +1,7 @@
 #include "libfts.h"
 
-void	print_bytes(char *str, int num_bytes) {
-	for (int i = 0; i < num_bytes; ++i) {
+void	print_bytes(char *str, int len) {
+	for (int i = 0; i < len; ++i) {
 		if (str[i] != '\0')
 			printf("%c", str[i]);
 		else
@@ -86,6 +86,22 @@ void	strlen_test(char *str)
     printf("%lu\n", strlen(str));
     printf("ft_strlen >> %s\n", str);
 	printf("%lu\n", ft_strlen(str));
+}
+
+void	memcpy_test(char *dst, char *src, int len)
+{
+    char *ret1;
+    char *ret2 ;
+
+    printf("memcpy >> %s\n", src);
+    ret1 = memcpy(dst, src, len);
+    print_bytes(ret1, len);
+    printf("\n");
+
+    printf("ft_memcpy >> %s\n", src);
+	ret2 = ft_memcpy(dst, src, len);
+    print_bytes(ret2, len);
+    printf("\n");
 }
 
 int main()
@@ -278,6 +294,22 @@ int main()
     strlen_test("ABCDE");
     strlen_test("Another one");
     strlen_test("something random");
+    
+
+    /*
+     * ft_memcpy
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_MEMCPY\n");
+    printf("------------------------------------------\n");
+    
+    char *src = "String of bytes";
+    char dst[20];
+
+    memcpy_test(dst, src, 6);
+    src = "See No Evil";
+    memcpy_test(dst, src, 5);
 
     //int fd;
 
