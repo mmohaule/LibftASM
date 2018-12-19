@@ -22,5 +22,6 @@ int             ft_puts(const char *s);
 size_t          ft_strlen(const char *s);
 
 void            *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+char            *ft_strdup(const char *s1);
 
 #endif

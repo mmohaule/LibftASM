@@ -104,6 +104,16 @@ void	memcpy_test(char *dst, char *src, int len)
     printf("\n");
 }
 
+void	strdup_test(char *s1)
+{
+
+    printf("strdup >> %s\n", s1);
+    printf("%s\n", strdup(s1));
+
+    printf("ft_strdup >> %s\n", s1);
+    printf("%s\n", ft_strdup(s1));
+}
+
 int main()
 {
     printf("\n");
@@ -295,7 +305,6 @@ int main()
     strlen_test("Another one");
     strlen_test("something random");
     
-
     /*
      * ft_memcpy
      * 
@@ -311,6 +320,29 @@ int main()
     src = "See No Evil";
     memcpy_test(dst, src, 5);
 
+    /*
+     * ft_strdup
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_STRDUP\n");
+    printf("------------------------------------------\n");
+    
+    char *s1 = "String of bytes";
+
+    strdup_test(s1);
+    s1 = "See No Evil";
+    strdup_test(s1);
+
+
+    /*
+     * ft_cat
+     * 
+     */
+    printf("------------------------------------------\n");
+    printf("FT_CAT\n");
+    printf("------------------------------------------\n");
+    
     //int fd;
 
     //fd = open("sample.txt", O_RDONLY);
